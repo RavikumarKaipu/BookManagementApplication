@@ -1,0 +1,43 @@
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.search-bar {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-bar input, .search-bar select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.quick-links {
+  margin-top: 30px;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.quick-links li a:hover {
+  text-decoration: underline;
+}
