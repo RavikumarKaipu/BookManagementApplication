@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import './EditBook.css'
 
 
 function EditBook() {
@@ -36,7 +35,7 @@ function EditBook() {
     e.preventDefault();
     axios.put(`http://localhost:5000/books/${id}`, book).then(() => {
       alert("Book updated successfully.");
-      navigate(`/book/${id}`);
+      navigate(`/book/${id}`,{replace:true});
     });
   };
 

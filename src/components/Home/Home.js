@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Home.css';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -9,14 +9,23 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    navigate(`/search-results?query=${searchQuery}&genre=${genreFilter}`);
+    navigate(`/search-results?query=${searchQuery}&genre=${genreFilter}`,{replace:true});
   };
+
+
+  const toAddBook=()=>{
+    navigate('/add-book',{replace:true})
+  }
+
+  const toBooksList=()=>{
+    navigate('/books-list',{replace:true})
+  }
 
   return (
     <div className="home">
      <Navbar/>
       <h1>Welcome to the Book Management System</h1>
-      <p>Manage your book collection with ease. Search, add, update, and delete your favorite books.</p>
+      <div class="magical-text">Manage your book collection with ease. Search, add, update, and delete your favorite books.</div>
 
       <div className="search-bar">
         <input 
@@ -38,11 +47,13 @@ const Home = () => {
 
       <div className="quick-links">
         <h3>Quick Access</h3>
-        <ul>
-          <li><Link to="/add-book">Add a New Book</Link></li>
-          <li><Link to="/books-list">View All Books</Link></li>
+        <ul className='ul-container'>
+          <li className='add-book' onClick={toAddBook}><Link >Add a New Book</Link></li>
+          <li className='book-list' onClick={toBooksList}><Link >View All Books</Link></li>
         </ul>
       </div>
+      <h2 className='thank-you'>Thank you (:</h2>
+      
     </div>
   );
 };

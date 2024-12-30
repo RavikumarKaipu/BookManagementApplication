@@ -20,7 +20,7 @@ const About = () => {
       <p>
         If you have any questions or feedback, feel free to reach out to us through our contact page.
       </p>
-      <button onClick={() => navigate('/')}>Back to Home</button>
+      <button onClick={() => navigate('/',{replace:true})}>Back to Home</button>
     </div>
   );
 };

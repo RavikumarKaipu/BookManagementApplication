@@ -17,7 +17,7 @@ const BookDetails = () => {
   const handleDelete = () => {
     axios.delete(`http://localhost:5000/books/${id}`)
       .then(() => {
-        navigate('/books-list');
+        navigate('/books-list',{replace:true});
       })
       .catch(error => console.error(error));
   };
@@ -34,7 +34,7 @@ const BookDetails = () => {
       <p><strong>Published Date:</strong> {book.PublishedDate}</p>
       <button onClick={() => navigate(`/edit/${id}`)}>Edit</button>
       <button onClick={handleDelete}>Delete</button>
-      <button onClick={() => navigate('/books-list')}>Back to List</button>
+      <button onClick={() => navigate('/books-list',{replace:true})}>Back to List</button>
       
     </div>
   );

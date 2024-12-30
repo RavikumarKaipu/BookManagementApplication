@@ -1,9 +1,9 @@
-/* Global styles */
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f4f7;
+  overflow-x:hidden;
 }
 
 h1, h2 {
@@ -26,9 +26,9 @@ input, select, button {
   font-size: 1rem;
 }
 
-/* Navigation Bar */
+
 nav {
-  background-color: #007bff;
+  background-color: #003cff;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -52,13 +52,56 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #f1f1f1;
+ color:white;
   text-decoration: underline;
 }
 
-/* Container for content */
+
 .container {
   max-width: 1200px;
   margin: 20px auto;
   padding: 0 20px;
 }
+
+/* Global styles for dark and light theme */
+.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+
+
+.dark-nav {
+  background-color: #333;
+}
+
+.light-nav {
+  background-color: rgb(0, 0, 255);
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-list li {
+  margin-right: 20px;
+}
+
+.navbar-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+
